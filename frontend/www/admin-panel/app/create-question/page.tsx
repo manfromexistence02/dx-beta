@@ -31,10 +31,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { ToastAction } from "@/registry/default//ui/toast"
 import { useToast } from "@/registry/default/ui/use-toast"
 import { Tag, TagInput } from 'emblor';
-import { cn } from '@udecode/cn';
-import { CommentsProvider } from '@udecode/plate-comments';
-import { Plate } from '@udecode/plate-common';
-import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
 // import { DndProvider } from 'react-dnd';
 // import { HTML5Backend } from 'react-dnd-html5-backend';
 
@@ -175,13 +171,13 @@ export default function CreateUniversity() {
     const [isOpen, setIsOpen] = React.useState(false)
     const [phoneNumberDetails, setPhoneNumberDetails] = React.useState(false)
     const containerRef = useRef(null);
-    const initialValue = [
-        {
-            id: '1',
-            type: ELEMENT_PARAGRAPH,
-            children: [{ text: 'Hello, World!' }],
-        },
-    ];
+    // const initialValue = [
+    //     {
+    //         id: '1',
+    //         type: ELEMENT_PARAGRAPH,
+    //         children: [{ text: 'Hello, World!' }],
+    //     },
+    // ];
     const [phone, setPhone] = React.useState("+1 (408) 996–1010");
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPhone(e.target.value);
